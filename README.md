@@ -48,10 +48,10 @@ deHomFrq = 20;
 eval = true;
 
 %% Run multi-scale TO + dehomogenisation
-[rhoPhys,TO] = deHomTop808(nelX,nelY,volFrac,rMin,wMin,wMax,dMin,deHomFrq,eval); 
+[rhoPhys0,TO] = deHomTop808(nelX,nelY,volFrac,rMin,wMin,wMax,dMin,deHomFrq,eval); 
 
 %% Re-run dehomogenisation with 0.5 dMin
-rhoPhys2 = deHomTop808(nelX,nelY,volFrac,rMin,wMin,wMax,0.5*dMin,deHomFrq,eval,TO); 
+rhoPhys1 = deHomTop808(nelX,nelY,volFrac,rMin,wMin,wMax,0.5*dMin,deHomFrq,eval,TO); 
 ```
 
 ## Help
