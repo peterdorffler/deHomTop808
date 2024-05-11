@@ -8,7 +8,7 @@
 \ \___,_\ \____\\ \_\ \_\ \____/\ \_\ \_\ \_\ \ \_\ \____/\ \ ,__/\ \____/ \ \____/\ \____/
  \/__,_ /\/____/ \/_/\/_/\/___/  \/_/\/_/\/_/  \/_/\/___/  \ \ \/  \/___/   \/___/  \/___/ 
                                                             \ \_\                          
-                                                             \/_/                               
+                                                             \/_/                          
 ```
 
 An 808-line Matlab educational code for combined multi-scale topology optimisation and phasor-based dehomogenisation.
