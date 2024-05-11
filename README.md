@@ -59,14 +59,14 @@ Please send your comments or questions to: pdlj@dtu.dk
 
 ## Authors
 
-This Matlab code was written by R.V.Woldseth, O.Sigmund and P.D.L.Jensen
+This Matlab code was written by R. V. Woldseth, O. Sigmund and P. D. L. Jensen,
 TopOpt Group, Department of Civil and Mechanical Engineering,
 Technical University of Denmark,
 DK-2800 Lyngby, Denmark.                                                
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
