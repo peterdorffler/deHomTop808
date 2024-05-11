@@ -37,21 +37,21 @@ nelX = 60; nelY = 30;
 % Volume fraction
 volFrac = 0.3;
 % Filter radius of thickness fields
-rmin = 2;
+rMin = 2;
 % Relative thickness bounds
 wMin = 0.1; wMax = 1.0;
 % Dehomogenisation length-scale relative to element size
-dmin = 0.2;
+dMin = 0.2;
 % Frequency of on-the-fly dehomogenisation
 deHomFrq = 20;
 % Post evaluation of dehomogenised result
 eval = true;
 
 %% Run multi-scale TO + dehomogenisation
-[rhoPhys,TO] = deHomTop808(nelX,nelY,volFrac,rmin,wMin,wMax,dmin,deHomFrq,eval); 
+[rhoPhys,TO] = deHomTop808(nelX,nelY,volFrac,rMin,wMin,wMax,dMin,deHomFrq,eval); 
 
-%% Re-run dehomogenisation with 0.5 dmin
-rhoPhys2 = deHomTop808(nelX,nelY,volFrac,rmin,wMin,wMax,0.5*dmin,deHomFrq,eval,TO); 
+%% Re-run dehomogenisation with 0.5 dMin
+rhoPhys2 = deHomTop808(nelX,nelY,volFrac,rMin,wMin,wMax,0.5*dMin,deHomFrq,eval,TO); 
 ```
 
 ## Help
