@@ -1,2 +1,73 @@
 # deHomTop808
-An 808 line Matlab code for interactive multi-scale topology optimization
+```
+ /\ \        /\ \/\ \                    /\__  _\                /'_ `\   /'__`\  /'_ `\   
+ \_\ \     __\ \ \_\ \    ___     ___ ___\/_/\ \/   ___   _____ /\ \L\ \ /\ \/\ \/\ \L\ \  
+ /'_` \  /'__`\ \  _  \  / __`\ /' __` __`\ \ \ \  / __`\/\ '__`\/_> _ <_\ \ \ \ \/_> _ <_ 
+/\ \L\ \/\  __/\ \ \ \ \/\ \L\ \/\ \/\ \/\ \ \ \ \/\ \L\ \ \ \L\ \/\ \L\ \\ \ \_\ \/\ \L\ \
+\ \___,_\ \____\\ \_\ \_\ \____/\ \_\ \_\ \_\ \ \_\ \____/\ \ ,__/\ \____/ \ \____/\ \____/
+ \/__,_ /\/____/ \/_/\/_/\/___/  \/_/\/_/\/_/  \/_/\/___/  \ \ \/  \/___/   \/___/  \/___/ 
+                                                            \ \_\                          
+                                                             \/_/                               
+```
+
+An 808-line Matlab educational code for combined multi-scale topology optimisation and phasor-based dehomogenisation.
+
+## Getting Started
+
+The code is documented in the paper: "An 808 line phasor-based dehomogenisation Matlab code for multi-scale topology optimisation, R.V.Woldseth, O.Sigmund and P.D.L.Jensen, 2024".
+
+The code was developed and tested using MATLAB, version R2023b, including MATLAB Image Processing Toolbox.
+
+The code can also be executed without the MATLAB Image Processing Toolbox, but the behaviour may change, see paper for details.
+
+The program is executed with the function ```deHomTop()```.
+
+Additional FE models are included in the repo:
+- ```prepFEA_cant()```
+- ```prepFEA_mbb()```
+- ```prepFEA_db()```
+
+Below is a Matlab code snippet of how to use and execute the code for both multi-scale topology optimisation, on-the-fly phasor-based dehomogenisation and post dehomogenisation.
+
+### Matlab example
+```
+% Grid size
+nelX = 60; nelY = 30;
+% Volume fraction
+volFrac = 0.3;
+% Filter radius of thickness fields
+rmin = 2;
+% Relative thickness bounds
+wMin = 0.1; wMax = 1.0;
+% Dehomogenisation length-scale relative to element size
+dmin = 0.2;
+% Frequency of on-the-fly dehomogenisation
+deHomFrq = 20;
+% Post evaluation of dehomogenised result
+eval = true;
+
+%% Run multi-scale TO + dehomogenisation
+[rhoPhys,TO] = deHomTop808(nelX,nelY,volFrac,rmin,wMin,wMax,dmin,deHomFrq,eval); 
+
+%% Re-run dehomogenisation with 0.5 dmin
+rhoPhys2 = deHomTop808(nelX,nelY,volFrac,rmin,wMin,wMax,0.5*dmin,deHomFrq,eval,TO); 
+```
+
+## Help
+
+Please send your comments or questions to: pdlj@dtu.dk
+
+## Authors
+
+This Matlab code was written by R.V.Woldseth, O.Sigmund and P.D.L.Jensen
+TopOpt Group, Department of Civil and Mechanical Engineering,
+Technical University of Denmark,
+DK-2800 Lyngby, Denmark.                                                
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
+## Acknowledgments
+
+The authors acknowledge the financial support from the InnoTop VILLUM investigator project through the Villum Foundation and nTopology inc. Furthermore, the authors would like to express their gratitude to Federico Ferrari for valuable discussions during the preparation of this work.
