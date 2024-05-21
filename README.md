@@ -21,7 +21,7 @@ The code was developed and tested using MATLAB, version R2023b, including MATLAB
 
 The code can also be executed without the MATLAB Image Processing Toolbox, but the behaviour may change, see paper for details.
 
-The program is executed with the function ```deHomTop()```.
+The program is executed with the function ```deHomTop808()```.
 
 Additional FE models are included in the repo:
 - ```prepFEA_cant()```
