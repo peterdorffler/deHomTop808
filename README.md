@@ -28,6 +28,10 @@ Additional FE models are included in the repo:
 - ```prepFEA_mbb()```
 - ```prepFEA_db()```
 
+Files for two-load bridge example includes:
+- ```twoLoadBridge_80_48_Rank3_data.mat```
+- ```getPas_2loadbridge.m```
+
 Below is a Matlab code snippet of how to use and execute the code for both multi-scale topology optimisation, on-the-fly phasor-based dehomogenisation and post dehomogenisation.
 
 ### Matlab example
