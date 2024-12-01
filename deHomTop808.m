@@ -220,7 +220,7 @@ dmudw(:,2,1)=-(((-1+w(:,2)).*wSum+rho).*(1-mu(:,1))-rho.*dmudw(:,1,1).*... % Com
     wSum).*w(:,2)./(wSum.^ 2.*(1-mu(:,1)).^2);
 dmudw(:,2,2)=-(((-1+w(:,1)).*wSum+rho).*(1-mu(:,1))-rho.*dmudw(:,1,2).*... % Compute dmu2dw2, sensitivities of mu2 wrt. w2
     wSum).*w(:,2)./(wSum.^ 2.*(1-mu(:,1)).^2)+rho./(wSum.*(1-mu(:,1)));
-[mu(wSum < 1e-14,:), dmudw(wSum < 1e-14,:,:)] = deal(0);                   % Correct zero width for numerical stability
+[mu(wSum < realmin,:), dmudw(wSum < realmin,:,:)] = deal(0);               % Correct zero width for numerical stability
 end
 %% ============== FUNCTION TO BUILD RANK-2 MATERIAL MODEL AND SENSITIVITIES
 function [CT,dCTdmu1,dCTdmu2,dCTda] = getConstitutiveRank2(a,mu,E,nu,EMin)
@@ -238,7 +238,7 @@ C(2,2,:) = E./denominator.*(mu2.*(1-mu2+mu2.*mu1))+EMin/(1-nu^2);          % C22
 C(3,3,:) = EMin/(1-nu^2)*(1-nu)/2;                                         % C33
 % ----------------------------------------------- TRANSFORM TO GLOBAL FRAME
 T = [c.^2 s.^2 c.*s; s.^2 c.^2 -c.*s; -2*c.*s 2*c.*s c.^2-s.^2];           % 2D rotation-transformation matrix
-Tt = pagectranspose(T);                                                    % 2D-wise transpose of T
+Tt = pagetranspose(T);                                                     % 2D-wise transpose of T
 CT = TRI(T2D(pagemtimes(pagemtimes(Tt,C),T)));                             % Transformed constitutive matrix, Ct = T'*C*T;
 % ---------------------------------------- GET SENSITIVITIES IN LOCAL FRAME
 dtmp=E./(denominator.^2);                                                  % Intermediate sensitivity term

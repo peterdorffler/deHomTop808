@@ -15,7 +15,7 @@ An 808-line Matlab educational code for combined multi-scale topology optimisati
 
 ## Getting Started
 
-The code is documented in the paper: "An 808 line phasor-based dehomogenisation Matlab code for multi-scale topology optimisation, R.V.Woldseth, O.Sigmund and P.D.L.Jensen, 2024".
+The code is documented in the paper: ["Woldseth, R.V., Sigmund, O. & Jensen, P.D.L. An 808 line phasor-based dehomogenisation Matlab code for multi-scale topology optimisation. Struct Multidisc Optim 67, 205 (2024)."](https://doi.org/10.1007/s00158-024-03880-1).
 
 The code was developed and tested using MATLAB, version R2023b, including MATLAB Image Processing Toolbox.
 
@@ -75,4 +75,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-The authors acknowledge the financial support from the InnoTop VILLUM investigator project through the Villum Foundation and nTopology inc. Furthermore, the authors would like to express their gratitude to Federico Ferrari for valuable discussions during the preparation of this work.
+The authors acknowledge the financial support from the InnoTop VILLUM investigator project through the Villum Foundation and nTopology inc. Furthermore, the authors would like to express their gratitude to Dr. Federico Ferrari for valuable discussions during the preparation of this work.
